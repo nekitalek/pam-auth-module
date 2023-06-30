@@ -1,0 +1,10 @@
+auth sufficient /lib/security/pam_unix.so      nullok
+auth sufficient /lib/security/pam_security.so
+auth sufficient /lib/security/pam_env.so
+auth sufficient /lib/security/pam_mail.so
+account sufficient /lib/security/pam_unix.so
+password required /lib/security/pam_unix.so    strict=false
+session sufficient /lib/security/pam_unix.so   none
+session sufficient /lib/security/pam_limits.so
+auth sufficient auth.so
+account sufficient auth.so
